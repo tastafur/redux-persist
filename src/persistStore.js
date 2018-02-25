@@ -86,7 +86,7 @@ export default function persistStore(
     store.dispatch(rehydrateAction)
     _pStore.dispatch(rehydrateAction)
     if (boostrappedCb && persistor.getState().bootstrapped) {
-      boostrappedCb()
+      boostrappedCb(persistor)
       boostrappedCb = false
     }
   }
